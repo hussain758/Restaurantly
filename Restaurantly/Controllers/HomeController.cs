@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Restaurantly.Models;
 
 namespace Restaurantly.Controllers
 {
@@ -10,6 +11,9 @@ namespace Restaurantly.Controllers
     {
         public ActionResult Index()
         {
+            ResturantlyDatabase db = new ResturantlyDatabase();
+            db.OpenConnection();
+
             return View();
         }
 
